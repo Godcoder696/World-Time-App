@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:world_time_app/pages/choose_location.dart';
+import 'package:world_time_app/pages/loading.dart';
+import 'pages/home.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: Home(),
+      // initialRoute: '/home',
+      routes: {
+        '/': (context)=> Loading(),
+        '/home': (context)=> Home(),
+        '/location': (context)=> ChooseLocation()
+      },
     )
   );
 }
-
-
-class Home extends StatelessWidget{
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context){
-    return Text('Hey There!');
-  }
-}                  
